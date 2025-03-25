@@ -17,7 +17,7 @@ Clonez le repository du frontend :
 
 Clonez le repository du backend-socket :
 ```sh
- git clone <URL_DU_REPO_BACKEND_SOCKET>
+ git clone https://github.com/ArtKaody/backend-socket.git
 ```
 
 ## 2. Lancer le projet
