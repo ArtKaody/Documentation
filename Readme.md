@@ -12,7 +12,7 @@ Avant de commencer, assurez-vous d'avoir les versions suivantes installées :
 
 Clonez le repository du frontend :
 ```sh
- git clone <URL_DU_REPO_FRONTEND>
+ git clone https://github.com/ArtKaody/frontend-save.git
 ```
 
 Clonez le repository du backend-socket :
@@ -80,7 +80,7 @@ npm run start
 
 1. Accédez au dossier frontend :
 ```sh
-cd frontend
+cd frontend-save
 ```
 2. Installez les dépendances :
 ```sh
