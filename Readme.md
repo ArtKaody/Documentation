@@ -5,6 +5,7 @@ Avant de commencer, assurez-vous d'avoir les versions suivantes installées :
 - **PostgreSQL** : v17
 - **Node.js** : v22.14.0
 - **.NET** : Assurez-vous d'avoir la dernière version stable installée
+- **Python**: Assurer-vous d'avoir la version 3.10.12 ou supérieur
 
 # Installation du projet
 
@@ -24,6 +25,12 @@ Clonez le repository du  backend-Asp.Net :
 
 ```bash
 git clone https://github.com/ArtKaody/backend-Asp.Net.git
+
+```
+Clonez le repository du  backend-affectation :
+
+```bash
+git clone https://github.com/ArtKaody/backend-affectation.git
 
 ```
 
@@ -103,6 +110,8 @@ et pour installer tous les dependances
 dotnet restore
 ```
 
+
+
 ### 3. Configurer la base de données PostgreSQL
 
 Assurez-vous que PostgreSQL est installé et en cours d'exécution.
@@ -128,6 +137,21 @@ Remplacez "VotreMotDePasse" par votre mot de passe PostgreSQL.
 dotnet run
 ```
 
+#################### Service python
+### 1. accédez au dossier du projet :
+```bash
+cd backend-affectation
+```
+
+### 2. Pour installer tous les dependances  
+
+```bash
+pip install fastapi uvicorn sqlalchemy psycopg2-binary
+pip install alembic
+pip install asyncpg sqlalchemy psycopg2
+pip install pydantic-settings
+ouvrez le dossier src/core/config.py et suivez les instructions dans le commentaire
+```
 
 
 ### Démarrer le frontend
@@ -143,6 +167,11 @@ npm install
 3. Démarrez l'application :
 ```sh
 npm run dev
+```
+
+### Démarrer le service du python:
+```sh
+uvicorn src.api.main:app --reload
 ```
 
 Votre projet est maintenant accessible et fonctionnel ! 🚀
