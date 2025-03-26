@@ -20,9 +20,19 @@ Clonez le repository du backend-socket :
  git clone https://github.com/ArtKaody/backend-socket.git
 ```
 
+Clonez le repository du  backend-Asp.Net :
+
+```bash
+git clone https://github.com/ArtKaody/backend-Asp.Net.git
+
+```
+
+
 ## 2. Lancer le projet
 
 ### Démarrer le backend
+
+installer en priorite backend socket pour le backend principale
 
 ############ Backend-socket 
 
@@ -75,6 +85,53 @@ ecrire comme message "first migrate"
 ```sh
 npm run start
 ```
+
+
+############ Backend-Asp.Net 
+
+### 1. accédez au dossier du projet :
+```bash
+cd backend-Asp.Net
+```
+
+### 2. Pour installer dotnet et tous les dependances 
+
+Il faut d'abord installer .Net version 6.0 ou plus 
+
+et pour installer tous les dependances 
+```bash
+dotnet restore
+```
+
+### 3. Configurer la base de données PostgreSQL
+
+Assurez-vous que PostgreSQL est installé et en cours d'exécution.
+
+Ouvrez pgAdmin ou un terminal et créez une nouvelle base de données
+
+    CREATE DATABASE gestion_achat
+
+Modifiez le fichier appsettings.json pour y renseigner vos informations de connexion PostgreSQL :
+Remplacez "G_A" par votre nom de base de donne  PostgreSQL.
+Remplacez "postgres" par nom d'utilisateur PostgreSQL.
+Remplacez "VotreMotDePasse" par votre mot de passe PostgreSQL.
+```bash
+
+"ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port=5432;Database=gestion_achat;Username=postgres;Password=VotreMotDePasse"
+}
+
+```
+
+🔹 Remarque : 
+
+### 4.Pour démarrer le serveur
+
+```bash
+dotnet run
+```
+
+
 
 ### Démarrer le frontend
 
