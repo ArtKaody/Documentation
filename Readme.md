@@ -54,9 +54,12 @@ copier dans .env
 
 
 #Changer "postgres" avec votre nom d'utilisateur dans postgres si c'est pars defaut vous garder comme le mien
-#Pour le mot de passe changer avec votre mot de passe lors de l'installation de postgres "root"
+#Pour le mot de passe changer "root" avec votre mot de passe lors de l'installation de postgres 
 #Et pour la base de donne, changer G_A avec le nom de votre base de donne 
-DATABASE_URL="postgresql://<postgres>:<root>@localhost:5432/<G_A>?schema=public"
+# DATABASE_URL="postgresql://<postgres>:root@localhost:5432/<G_A>?schema=public"
+
+
+DATABASE_URL="postgresql://postgres:root@localhost:5432/G_A?schema=public"
 ```
 ensuite 
 
