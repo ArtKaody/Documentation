@@ -24,6 +24,8 @@ Clonez le repository du backend-socket :
 
 ### Démarrer le backend
 
+############ Backend-socket 
+
 1. Accédez au dossier backend-socket :
 ```sh
 cd backend-socket
@@ -32,7 +34,40 @@ cd backend-socket
 ```sh
 npm install
 ```
-3. Démarrez le serveur :
+3.  Migration de la base de donne :
+### verifier que vous aves creer une base de donne pour la gestion d'achat dans postgres 
+ ouvrez pgadmin
+ entrer votre mot de passe et creer une base de donne "G_A"
+
+ ensuite dans le dossier backend-socket 
+ creer un dossier .env
+
+ensuite
+copier dans .env
+
+```sh
+# Environment variables declared in this file are automatically made available to Prisma.
+# See the documentation for more detail: https://pris.ly/d/prisma-schema#accessing-environment-variables-from-the-schema
+
+# Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB.
+# See the documentation for all the connection string options: https://pris.ly/d/connection-strings
+
+
+#Changer "postgres" avec votre nom d'utilisateur dans postgres si c'est pars defaut vous garder comme le mien
+#Pour le mot de passe changer avec votre mot de passe lors de l'installation de postgres "root"
+DATABASE_URL="postgresql://<postgres>:<root>@localhost:5432/G_A?schema=public"
+```
+ensuite 
+
+lancer la migration 
+
+```sh
+npx prisma migrate dev 
+```
+
+ecrire comme message "first migrate"
+
+4. Démarrez le serveur :
 ```sh
 npm run start
 ```
