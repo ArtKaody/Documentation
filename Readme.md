@@ -107,9 +107,6 @@ dotnet restore
 
 Assurez-vous que PostgreSQL est installé et en cours d'exécution.
 
-Ouvrez pgAdmin ou un terminal et créez une nouvelle base de données
-
-    CREATE DATABASE gestion_achat
 
 Modifiez le fichier appsettings.json pour y renseigner vos informations de connexion PostgreSQL :
 Remplacez "G_A" par votre nom de base de donne  PostgreSQL.
